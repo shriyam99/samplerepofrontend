@@ -1,0 +1,125 @@
+.main-app{
+  box-sizing: content-box;
+  height: 100%;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.center{
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.wrapper{
+  margin-top: 10vh;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  color: rgba(49, 0, 82, 0.699);
+}
+
+.center>h1{
+  width: 100%;
+  font-weight: bolder;
+  font-size: 4rem;
+}
+
+.center>p{
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+
+form{
+  width: 70%;
+  border-radius: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+  0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+form>h1{
+  font-size: 2rem;
+}
+
+form>input{
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+  height: 2rem;
+  padding: 1rem;
+}
+
+form>.dataToShow{
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #0008;
+  border-radius: 1rem;
+  border: 2px dotted purple;
+  box-shadow: 0 0 10px rgba(175, 1, 175, 0.562),
+  inset 0 0 10px rgba(175, 1, 175, 0.562);
+}
+
+form>.image{
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+  height: 3rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+form>.image>p{
+  flex-grow: 1;
+  font-size: 0.9rem;
+  text-align: center;
+}
+form>.image>button{
+  width:3.5rem;
+  border-radius: 0 2rem 2rem 0;
+  height: 100%;
+  border: none;
+  background: rgb(110, 1, 182);
+  color: white;
+}
+form>textarea{
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 1rem 0;
+  height: 3rem;
+  padding: 1rem;
+  resize: none;
+  height: 7rem;
+  font-size: 1.2rem;
+}
+
+#submit{
+  margin: 2rem 0;
+  height: 2rem;
+  background: rgb(110, 1, 182);
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(49, 0, 82, 0.699);
+  font-size: 1.2rem;
+  padding: .5rem;
+}
