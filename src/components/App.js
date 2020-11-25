@@ -1,6 +1,10 @@
 import React, { Component, useEffect, useState } from 'react';
 import '../styles/App.css';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Header from './Header';
+import TopNews from './TopNews';
+import MarketAction from './MarketAction';
+// import testData from '../testData.json';
 import axios from 'axios';
 
 class App extends Component {
@@ -8,12 +12,38 @@ class App extends Component {
     super(props);
     this.state = {
       isLoading: false,
-      data: null
+      data: null,
+      stockData: null,
+      isStockLoading: true,
+      newsData: null,
+      isNewsLoading: true
     };
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-   handleSubmit(e) {           
+  componentDidMount(){
+    axios.get("http://localhost:8081/getstockData")
+      .then((res)=>{
+      this.setState({stockData: res.data});
+      this.setState({isStockLoading: false});
+    })
+    .catch((err)=>{
+      console.log(`Something went wrong: ${err}`);
+      this.setState({isStockLoading: false});
+    });
+
+    axios.get("http://localhost:8081/getNews")
+      .then((res)=>{
+      this.setState({newsData: res.data.news});
+      this.setState({isNewsLoading: false});
+    })
+    .catch((err)=>{
+      console.log(`Something went wrong: ${err}`);
+      this.setState({isNewsLoading: false});
+    });
+  }
+
+   handleSubmit(e) {
     e.preventDefault();
     this.setState({isLoading: true});
     let price = e.target.price;
@@ -55,6 +85,14 @@ class App extends Component {
           </form>
         </div>
     </div>
+    <MarketAction 
+      loading={this.state.isStockLoading}
+      data={this.state.stockData}
+    />
+    <TopNews 
+      loading={this.state.isNewsLoading}
+      data={this.state.newsData}
+    />
     </React.Fragment>
     );
   }

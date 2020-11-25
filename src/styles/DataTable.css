@@ -1,0 +1,39 @@
+
+.data-table{
+    width: 100%;
+    padding: 2rem;
+}
+.data-table>.heading{
+    width: 100%;
+    font-weight: 500;
+}
+
+.data-table>.data>.row{
+    display: flex;
+    align-items: center;
+    border-radius: 5rem;
+    padding: 0 10rem;
+}
+
+.data-table>.data>.row:nth-child(even){
+    background-color: #ddd;
+}
+.data-table>.data>.row:hover{
+    background: rgb(162, 42, 241, 0.7);
+    font-weight: bolder;
+    color: white;
+    transition: .2s;
+}
+.data-table>.data>.row.head:hover{
+    background: transparent;
+    color: black;
+}
+.data-table>.data>.row.head{
+    font-weight: bolder;
+    font-size: 1.4rem;
+    border: 5px dashed rgb(162, 42, 241);
+}
+.data-table>.data>.row>.col{
+    width: 20rem;
+    padding: .5rem;
+}

@@ -1,0 +1,33 @@
+.news-headlines{
+    padding: 2rem;
+}
+
+.news-headlines>h1{
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    color: #333;
+    margin: 3rem 0;
+    font-size: 4rem;
+}
+.allnews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.news{
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: blueviolet;
+    width: 100%;
+    text-align: center;
+}
+
+.news>a:link{
+    color: blueviolet;
+}
+.news>a:visited{
+    color: blueviolet;
+}
