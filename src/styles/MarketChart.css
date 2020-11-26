@@ -1,0 +1,21 @@
+
+.market-chart>h1{
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    color: #333;
+    margin: 5rem 0 2rem 0;
+    font-size: 4rem;
+}
+.market-chart>.chart-wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+}
+
+.chart-wrapper>iframe{
+    border: 5px dashed blueviolet;
+    border-radius: 1rem;
+    width: 100%;
+    height: 36rem;
+}

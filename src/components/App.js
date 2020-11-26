@@ -4,6 +4,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Header from './Header';
 import TopNews from './TopNews';
 import MarketAction from './MarketAction';
+import MarketChart from './MarketChart';
 // import testData from '../testData.json';
 import axios from 'axios';
 
@@ -85,6 +86,7 @@ class App extends Component {
           </form>
         </div>
     </div>
+    <MarketChart />
     <MarketAction 
       loading={this.state.isStockLoading}
       data={this.state.stockData}
@@ -93,6 +95,7 @@ class App extends Component {
       loading={this.state.isNewsLoading}
       data={this.state.newsData}
     />
+    
     </React.Fragment>
     );
   }
