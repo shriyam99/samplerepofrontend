@@ -47,13 +47,13 @@ class App extends Component {
    handleSubmit(e) {
     e.preventDefault();
     this.setState({isLoading: true});
-    let price = e.target.price;
-    let time = e.target.time;
-    console.log(e);
-    console.log('submit button is clicked');
-    axios.get("http://localhost:8081")
-      .then((res)=>{
-      console.log(res.data.body);
+    let price = e.target.price.value;
+    let time = e.target.time.value;
+    axios.post("http://localhost:8081/", {
+      price,
+      time
+    }).then((res)=>{
+      console.log(JSON.parse(res.data.body));
       this.setState({data: res.data.body});
       this.setState({isLoading: false});
     })
@@ -61,7 +61,6 @@ class App extends Component {
       console.log(`Something went wrong: ${err}`);
       this.setState({isLoading: false});
     })
-
    }
 
   render(){
@@ -76,13 +75,13 @@ class App extends Component {
           </div>
         </div>
         <div className="wrapper">
-          <form >
+          <form onSubmit={this.handleSubmit}>
             <h1>Type in your parameters: </h1>
             <input type="text" onChange={this.handleChange} id="price" name="price" required placeholder="Price in rupees"/>
             <input type="text" onChange={this.handleChange} id="time" name="time" required placeholder="Time in days"/>
             {this.state.isLoading===true ? <p>Fetching data...</p> : null}
             {this.state.data!==null ? <div className="dataToShow">{this.state.data}</div> : null}
-            <button id="submit" onClick={this.handleSubmit}>Submit</button>
+            <button id="submit">Submit</button>
           </form>
         </div>
     </div>
