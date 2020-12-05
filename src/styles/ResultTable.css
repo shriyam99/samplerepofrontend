@@ -1,0 +1,27 @@
+
+#resultTable>.date{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #333;
+}
+#resultTable>.row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0.5rem;
+    padding: .3rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    border-left: 1px dashed blueviolet;
+    border-right: 1px dashed blueviolet;
+    border-top: 1px dashed blueviolet;
+    border-bottom: 4px solid blueviolet;
+}
+
+#resultTable>.row>.col{
+    width: 50%;
+}
+#resultTable>.row>.col.company{
+    font-weight: bolder;
+}

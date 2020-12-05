@@ -1,0 +1,47 @@
+
+#searchTable{
+    border: 2px dashed #333;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#searchTable .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+#searchTable .row:nth-child(even){
+    background: #ddd;
+    border-radius: 1rem;
+}
+
+#searchTable .col.date{
+    padding-left: 20%;
+    width: 50%;
+}
+
+#searchTable .col.value{
+    padding-left: 17%;
+    width: 50%;
+}
+#searchTable .col.heading{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    padding: 0;
+}
+
+.search-table-not-found{
+    border: 2px dashed red;
+    padding: 2rem;
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+}

@@ -98,6 +98,7 @@ form>.image>button{
   border: none;
   background: rgb(110, 1, 182);
   color: white;
+  cursor: pointer;
 }
 form>textarea{
   font-family: 'Open Sans', sans-serif;

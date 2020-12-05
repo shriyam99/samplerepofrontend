@@ -18,16 +18,6 @@
 .data-table>.data>.row:nth-child(even){
     background-color: #ddd;
 }
-.data-table>.data>.row:hover{
-    background: rgb(162, 42, 241, 0.7);
-    font-weight: bolder;
-    color: white;
-    transition: .2s;
-}
-.data-table>.data>.row.head:hover{
-    background: transparent;
-    color: black;
-}
 .data-table>.data>.row.head{
     font-weight: bolder;
     font-size: 1.4rem;
