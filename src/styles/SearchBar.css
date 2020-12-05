@@ -24,11 +24,16 @@
     height: 3rem;
     width: 60%;
     border-radius: 2rem;
-    background: blueviolet;
+    background: rgb(110, 1, 182);
+    box-shadow: 0 0 25px rgba(49, 0, 82, 0.699);
     color: white;
     border: none;
     cursor: pointer;
     font-size: 1.3rem;
+    transition: .2s;
+}
+#company-btn:hover{
+    background: #a229f0;
 }
 #searchBar>.searchbar-heading{
     width: 100%;
