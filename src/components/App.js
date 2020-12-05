@@ -72,7 +72,7 @@ class App extends Component {
       this.setState({isLoading: false});
     })
 
-    //just for receiving the data...
+    //just to receive data from json...
     // axios.post("http://localhost:8081", {
     //   time
     // })

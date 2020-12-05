@@ -16,7 +16,6 @@
   flex-direction: column;
 }
 
-
 .wrapper{
   margin-top: 10vh;
   height: 100%;
@@ -91,6 +90,7 @@ form>.image>p{
   font-size: 0.9rem;
   text-align: center;
 }
+
 form>.image>button{
   width:3.5rem;
   border-radius: 0 2rem 2rem 0;
@@ -100,6 +100,7 @@ form>.image>button{
   color: white;
   cursor: pointer;
 }
+
 form>textarea{
   font-family: 'Open Sans', sans-serif;
   border-radius: 2rem;
